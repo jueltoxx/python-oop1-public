@@ -1,39 +1,34 @@
-class artikel:
-    def __init__(self,name,menge,preis):
-        self.name = name
-        self.menge = menge
-        self.preis = preis
+# Umsetzen mit Klassen um nicht Strings zu verwalten
 
-class liste:
-    def __init__(self):
-        self.liste = []
+einkaufsliste = []
 
-    def add(self,aName,aMenge,aPreis):
-        a = artikel(aName,aMenge,aPreis)
-        self.liste.append(a)
+# User aufordern
+def artHinzu():
+    artikel = input("Geben Sie den Artikel ein: ")
+    einkaufsliste.append(artikel)
+def eklAnzeigen():
+    print(einkaufsliste)
+def artEntfernen():
+    removeItem = input("Was möchtest du entfernen?")
+    if removeItem in einkaufsliste:
+        einkaufsliste.remove(removeItem)
+    else:
+        print("Artikel nicht vorhanden")
 
-    def artikelAusgeben(self):
-        for artikel in self.liste:
-            print(f"Name: {artikel.name}, Menge: {artikel.menge}, Preis: {artikel.preis}")
-
-    def artikelEntfernen(self, artikelName):
-        for artikel in self.liste:
-            if artikel.name == artikelName:
-                self.liste.remove(artikel)
-
-
-meineEinkaufsliste = liste()
-
-# artikel1 = artikel("brot",1,2)
-# artikel2 = artikel("apfel",5,0.5)
-# artikel3 = artikel("birne",1,1)
-
-meineEinkaufsliste.add("brot",1,2)
-meineEinkaufsliste.add("apfel",1,2)
-
-# meineEinkaufsliste.add(artikel2)
-# meineEinkaufsliste.add(artikel3)
-
-meineEinkaufsliste.artikelAusgeben()
-meineEinkaufsliste.artikelEntfernen("brot")
-meineEinkaufsliste.artikelAusgeben()
+while True:
+    auswahl = input("Was möchten Sie tun? 1: Artikel hinzu, 2: Artikel entfernen, 3: Liste ausgeben oder 4 zum Beenden: ")
+    if auswahl == "1":
+        artHinzu()
+        auswahl = 0
+    elif auswahl == "2":
+        artEntfernen()
+        auswahl = 0
+    elif auswahl == "3":
+        eklAnzeigen()
+        auswahl = 0
+    elif auswahl == "4":
+        print("goodbye")
+        quit()
+    else:
+        print("Nix")
+        auswahl = 0

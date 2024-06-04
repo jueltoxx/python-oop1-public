@@ -1,0 +1,81 @@
+{
+    "Kurs": [
+        {
+            "titel": "Kurs 1",
+            "Dozent": {
+                "name": "Dozent 1",
+                "kurse": ["Kurs 1", "Kurs 2"]
+            },
+            "status": "offen",
+            "studenten":[
+                {
+                    "name": "Student 1",
+                    "matrikelnummer": "S1245",
+                    "kurse": ["Kurs 1","Kurs 2"]
+                },
+                {
+                    "name": "Student 2",
+                    "matrikelnummer": "S2336",
+                    "kurse": ["Kurs 1","Kurs 2"]
+                }
+            ]
+        },
+        {
+            "titel": "Kurs 2",
+            "Dozent": {
+                "name": "Dozent 1",
+                "kurse": ["Kurs 1", "Kurs 2"]
+            },
+            "status": "offen",
+            "studenten":[
+                {
+                    "name": "Student 1",
+                    "matrikelnummer": "S1245",
+                    "kurse": ["Kurs 1","Kurs 2","Kurs 3"]
+                },
+                {
+                    "name": "Student 2",
+                    "matrikelnummer": "S2336",
+                    "kurse": ["Kurs 1","Kurs 2"]
+                }
+            ] 
+        },
+        {
+            "titel": "Kurs 3",
+            "Dozent": {
+                "name": "Dozent 2",
+                "kurse": ["Kurs 3"]
+            },
+            "status": "geschlossen",
+            "studenten":[
+                {
+                    "name": "Student 1",
+                    "matrikelnummer": "S1245",
+                    "kurse": ["Kurs 1","Kurs 2","Kurs 3"]
+                },
+                {
+                    "name": "Student 3",
+                    "matrikelnummer": "S4876",
+                    "kurse": ["Kurs 3"]
+                }
+            ] 
+        }
+    ],
+    "Studenten": [
+        {
+            "name": "Student 1",
+            "matrikelnummer": "S1245",
+            "kurse": ["Kurs 1","Kurs 2","Kurs 3"]
+        },
+        {
+            "name": "Student 2",
+            "matrikelnummer": "S2336",
+            "kurse": ["Kurs 1","Kurs 2"]
+        },
+        {
+            "name": "Student 3",
+            "matrikelnummer": "S4876",
+            "kurse": ["Kurs 3"]
+        }
+    ]
+}
